@@ -1,6 +1,8 @@
 
 import '../css/style.css';
 import '../css/snackbar.css';
+import { fetchData } from './fetch';
+//import {getUsers} from './usere';
 //import {getItems} from './items.js';
 
 
@@ -81,3 +83,60 @@ function synchronousFunction() {
     }
  };
  getItems();
+
+ //haetaan GET all items nappi ja tehdään rajapintahaku
+ //const getItemBtn = document.querySelector('.getItems');
+ //getItemBtn.addEventListener('click', getItems);
+
+ const getUsers = async () => {
+  try {
+     const response = await fetch('http://localhost:3000/api/users');
+      const data = await response.json();
+     console.log('Haetaan omasta rajapinnasta items!');
+     console.log(data);
+  } catch (error) {
+      console.error('Virhe:', error);
+  }
+};
+
+getUsers();
+
+
+ //const getUserBtn = document.querySelector('.get_Users');
+//getUserBtn.addEventListener('click', getUsers);
+
+const addUsers = async (username, password, email) => {
+  try {
+    const url = 'http://localhost:3000/api/users';
+
+    const options = {
+      body: JSON.stringify({
+        username: sara,
+        password: password,
+        email: email.fi,
+      }),
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    console.log(options);
+
+    // Oletetaan, että fetchData ei ole määritelty. Käytetään suoraan fetch().
+    const response = await fetch(url, options);
+    const data = await response.json();
+
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error('Virhe tapahtui:', error);
+  }
+};
+
+export { addUsers };
+
+
+
+//const addUserForm = document.querySelector('.addform');
+//addUserForm.addEventListener('click', addUser);
