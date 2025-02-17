@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background-color: #f8f8f8;
+      }
+
+      .wrapper {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      /* 🔹 Navigaatio */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        background: white;
+        border-bottom: 2px solid #ff00ff;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff00ff;
+      }
+
+      nav {
+        display: flex;
+        gap: 15px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #ff00ff;
+        font-style: italic;
+        font-size: 18px;
+      }
+
+      .login-btn {
+        background: #ff00ff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      /* 🔹 Pääsisältö */
+      main {
+        background-color: antiquewhite;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      #left {
+        background-color: rgb(221, 164, 216);
+        flex: 1;
+        padding: 15px;
+      }
+
+      #right {
+        background-color: white;
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #upper {
+        flex: 1;
+        background-image: url("https://placedog.net/800/400");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 80% 50%, 100% 100%, 0 100%);
+      }
+
+      #lower {
+        flex: 1;
+        padding: 20px;
+      }
+
+      h2 {
+        font-style: italic;
+      }
+
+      footer {
+        background-color: rgb(150, 150, 150);
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- 🔹 Navigaatio -->
+      <header>
+        <div class="logo">🐶</div>
+        <nav>
+          <a href="#">HOME</a>
+          <a href="#">DogS</a>
+        </nav>
+        <button class="login-btn">Login</button>
+      </header>
+
+      <!-- 🔹 Pääsisältö -->
+      <main>
+        <div id="left">
+          <h2>Recent Posts</h2>
+          <div>Dog Post One</div>
+          <div>Dog Post Two</div>
+        </div>
+        <div id="right">
+          <div id="upper"></div>
+          <div id="lower">
+            <h2>🐾 <em>Cool Dog</em></h2>
+            <p>
+              <em>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</em> Eum in hic, eaque repudiandae impedit voluptates tempora molestiae!
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <!-- 🔹 Footer -->
+      <footer>
+        <p>Flexbox Layout Example</p>
+      </footer>
+    </div>
+  </body>
+</html>
