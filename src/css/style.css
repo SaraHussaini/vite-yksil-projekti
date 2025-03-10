@@ -11,8 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --pink: rgb(216, 133, 147);
+  --pink: rgb(133, 140, 216);
   --p-10: 10px;
+}
+body {
+  background: linear-gradient(to right, #b2ff9a, #c4d5fa);
 }
 
 * {
@@ -210,6 +213,7 @@ dialog {
 }
 
 .card-img  img {
+  min-height: 300px;
   width: 100px;
 }
 /*oikea*/
@@ -218,8 +222,95 @@ dialog {
   flex: 4;
 }
 
+#bgimage {
+  background-image: url('../img/diary.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+       
+/* sininen outline pois */
+*:focus {
+  outline: none;
+}
+
+/* Nyt värjää myös submit buttonin, ehkä fiksua käyttää id/luokka */
+.registerForm input {
+  border: 1px solid white;
+  border-left: 5px solid;
+  transition: border-color .5s ease-out;
+}
+::placeholder {
+  color: rgb(126, 126, 126);
+  padding-left: 10px;
+  font-weight: 100;
+  -moz-padding-start: 30px;
+}
+input:focus, textarea:focus {
+  background-color: rgb(255, 244, 209);
+}
+.registerForm input:optional {
+  border-left-color: rgb(140, 140, 140);
+}
+.registerForm input:required {
+  border-left-color: yellow;
+}
+.registerForm input:invalid {
+  border-left-color: red;
+}
+.registerForm input:valid {
+  border-left-color: lightgreen
+}
+
+/* Navigaatiopalkin tyylit */
+header {
+  background-color: rgba(0, 0, 0, 0.646); /* Musta tausta */
+  padding: 15px 0;
+  text-align: left;
+}
+
+/* Navigaatiolinkit */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  color: yellow; /* Tekstin väri */
+  font-weight: bold;
+}
+
+/* Linkin hover-efekti */
+.nav-links a:hover {
+  color: orange;
+}
+
 @media screen and (max-width: 800px) {
   .forms {
     flex-direction: column;
   }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.animated-text {
+  animation: slideIn 1s ease-out;
 }

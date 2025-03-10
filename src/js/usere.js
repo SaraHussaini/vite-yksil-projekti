@@ -159,3 +159,4 @@ const addUser = async (event) => {
 // GET http://localhost:3000/api/users/:id
 
 export {getUsers, addUser};
+

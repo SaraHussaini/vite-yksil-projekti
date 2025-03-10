@@ -12,7 +12,9 @@ const getEntries = async () => {
 
   console.log(diaryContainer);
 
-  const url = '/diary.json';
+ // const url = '/diary.json';
+ const url = 'http://localhost:3000/api/entries'; // Varmista, että tiedosto on oikeassa paikassa
+ console.log('URL', url);
   const response = await fetchData(url);
 
   if (!response || response.error) {
@@ -41,11 +43,16 @@ const getEntries = async () => {
     const cardDiary = document.createElement('div');
     cardDiary.classList.add('card-diary');
     cardDiary.innerHTML = `
-      <p><strong>Date:</strong> ${entry.entry_date}</p>
-      <p><strong>Mood:</strong> ${entry.mood}</p>
-      <p><strong>Weight:</strong> ${entry.weight} kg</p>
-      <p><strong>Sleep:</strong> ${entry.sleep_hours} hours</p>
-      <p><strong>Notes:</strong> ${entry.notes}</p>
+     <p><strong>Päivämäärä:</strong> ${entry.entry_date}</p>
+      <p><strong>Verensokeri:</strong> ${entry.blood_sugar} </p>
+      <p><strong>Insuliiniannos:</strong> ${entry.insulin_dose} </p>
+      <p><strong>Mieliala:</strong> ${entry.mood}</p>
+      <p><strong>Ruoka:</strong> ${entry.food}</p>
+      <p><strong>Liikunta:</strong> ${entry.exercise}</p>
+      <p><strong>Paino:</strong> ${entry.weight} </p>
+      <p><strong>Uni:</strong> ${entry.sleep_hours} </p>
+      <p><strong>Muistiinpanot:</strong> ${entry.notes}</p>
+      
     `;
 
     card.appendChild(cardImg);
@@ -53,6 +60,8 @@ const getEntries = async () => {
     diaryContainer.appendChild(card);
   });
 };
+
+
 
 // Lisää tapahtumankuuntelija napille
 document.querySelector('.get_entries').addEventListener('click', getEntries);

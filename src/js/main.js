@@ -3,9 +3,12 @@ import '../css/snackbar.css';
 import {getItems} from './items.js';
 import {getUsers, addUser} from './usere.js';
 import {getData} from './test.js';
-import {getEntries} from './entries.js';
 
-document.querySelector('#app').innerHTML = 'Moi tässä oman APIn harjoituksia';
+
+import {getEntries} from './diary.js';
+document.querySelector(
+    '#app'
+).innerHTML = `Moi kirjaantunut käyttäjä ${localStorage.getItem('nimi')}`;
 
 getData();
 
@@ -24,3 +27,5 @@ addUserForm.addEventListener('click', addUser);
 
 const getEntriesBtn = document.querySelector('.get_entries');
 getEntriesBtn.addEventListener('click', getEntries);
+ 
+document.querySelector('.get_entries').addEventListener('click', getEntries);

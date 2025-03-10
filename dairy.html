@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+<header>
+    <nav>
+      <ul>
+        <ul class="nav-links">
+        <li><a href="./index.html">Kirjaudu sisään</a></li>
+        <li><a href="./dairy.html">Päiväkirja</a></li>
+        <li><a href="./home.html">Koti-testi</a></li>
+        <li><a href="http://localhost:3000/docs/" target="_blank">API Dokumentaatio</a></li>
+       
+      </ul>
+    </nav>
+</header>
+<div id="app"></div>
+<h2 class="animated-text">Tervetuloa päiväkirjaan!</h2>
+<p>Olemme iloisia, että olet täällä. Aloita päiväsi lisäämällä uusi merkintä päiväkirjaasi!</p>
+
+<button class="get_entries">Hae päiväkirjamerkinnät</button>
+<section class="card-area2" id="diary"></section>
+<input type="date" id="edit-date-9">
+<div id="diary"></div>
+
+</main>
+      <!-- The actual snackbar -->
+      <div id="snackbar">Some text some message..</div>
+   
+    <dialog class="info_dialog"  >
+      <p>
+        <!-- tähän täytetään käyttäjän tiedot -->
+        <!-- # Get user by id -->
+        <!-- GET http://127.0.0.1:3000/api/users/1 -->
+
+     
+        <h1 id="welcomeMessage">Tervetuloa!</h1>
+        <button onclick="logout()">Kirjaudu ulos</button>
+          
+        
+        <script>
+          function logout() {
+              localStorage.removeItem('token'); // Poista token
+              window.location.href = "home.html"; // Palaa kirjautumissivulle
+          }
+          </script>
+
+
+
+  
+<script type="module" src="/src/js/main.js"></script>
+    
+  </body>
+</html>
