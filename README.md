@@ -1,6 +1,18 @@
 ##  Kuvakaappaukset
 
 ### Kirjautumisnäkymä
+![Kirjautumisnäkymä](public/img/screenshots/login.png)
+
+### Etusivu
+![Etusivu](public/img/screenshots/homepage.png)
+
+### Testisivu
+![Testisivu](public/img/screenshots/hometest.png)
+
+### API-dokumentaatio
+![API-dokumentaatio](public/img/screenshots/api_docs.png)##  Kuvakaappaukset
+
+### Kirjautumisnäkymä
 ![Kirjautumisnäkymä](public/screenshots/login.png)
 
 ### Etusivu
