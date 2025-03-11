@@ -1,4 +1,28 @@
-# Vite Front-end Projekti
+##  Kuvakaappaukset
+
+### Kirjautumisnäkymä
+![Kirjautumisnäkymä](public/screenshots/login.png)
+
+### Etusivu
+![Etusivu](public/screenshots/homepage.png)
+
+### Testisivu
+![Testisivu](public/screenshots/hometest.png)
+
+### API-dokumentaatio
+![API-dokumentaatio](public/screenshots/api_docs.png)##  Kuvakaappaukset
+
+### Kirjautumisnäkymä
+![Kirjautumisnäkymä](public/screenshots/login.png)
+
+### Etusivu
+![Etusivu](public/screenshots/homepage.png)
+
+### Testisivu
+![Testisivu](public/screenshots/hometest.png)
+
+### API-dokumentaatio
+![API-dokumentaatio](public/screenshots/api_docs.png)# Vite Front-end Projekti
 
 Tämä on front-end-projekti, joka on kehitetty **Vite-kehyksellä**. Se sisältää modernin ja responsiivisen käyttöliittymän sekä API-yhteydet backendiin.
 
